@@ -17,3 +17,7 @@ RUN pip install --no-cache-dir \
       "numpy>=1.26.0" \
       "requests>=2.32.0" \
       "psutil>=5.9.0"
+
+# Register the network volume's models dir under the Hunyuan folder categories so
+# the loader finds the model at /runpod-volume/models/<model-name>/.
+RUN printf '\ncomfyui_hunyuan:\n  base_path: /runpod-volume\n  hunyuan: models/\n  hunyuan_instruct: models/\n' >> /comfyui/extra_model_paths.yaml
