@@ -16,7 +16,9 @@ RUN pip install --no-cache-dir \
       "pillow>=11.0.0" \
       "numpy>=1.26.0" \
       "requests>=2.32.0" \
-      "psutil>=5.9.0"
+      "psutil>=5.9.0" \
+      "diffusers>=0.31.0" \
+      "einops>=0.8.0"
 
 # Register the network volume's models dir under the Hunyuan folder categories so
 # the loader finds the model at /runpod-volume/models/<model-name>/.
