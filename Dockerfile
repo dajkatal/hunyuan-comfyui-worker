@@ -1,5 +1,6 @@
 # worker-comfyui + Comfy_HunyuanImage3 custom nodes for HunyuanImage 3.0 Instruct edits.
-FROM runpod/worker-comfyui:5.8.6-base
+# CUDA-12.8 base: matches CA-MTL-3's GPU driver (12.8) and supports Blackwell sm_120.
+FROM runpod/worker-comfyui:5.8.6-base-cuda12.8.1
 
 # Install the Hunyuan Image 3 custom nodes into ComfyUI.
 RUN cd /comfyui/custom_nodes \
